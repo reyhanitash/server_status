@@ -404,6 +404,7 @@ md = {
 
       //start animation for the Emails Subscription Chart
       md.startAnimationForBarChart(websiteViewsChart);
+
     }
   },
 

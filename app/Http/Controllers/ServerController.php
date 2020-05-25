@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Charts\StatusChart;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Spatie\UptimeMonitor\Models\Monitor;
@@ -19,10 +20,9 @@ class ServerController extends Controller
 
     public function index()
     {
-        //
 
         $servers=Monitor::all();
-        return view('welcome' ,compact('servers'));
+        return view('welcome' ,compact('servers' ));
     }
 
 
@@ -54,6 +54,7 @@ class ServerController extends Controller
     public function edit($id)
     {
         //
+
     }
 
     /**
@@ -80,4 +81,12 @@ class ServerController extends Controller
         $server->delete();
         return redirect()->action('ServerController@index');
     }
+
+    public function refresh()
+    {
+        Artisan::call('monitor:check-uptime');
+        return redirect()->action('ServerController@index');
+
+    }
+
 }

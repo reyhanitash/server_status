@@ -12,7 +12,7 @@
 =========================================================
 
  The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.*/
- 
+
 
 /*     brand Colors              */
 
@@ -14884,7 +14884,7 @@ fieldset[disabled] .form-group.is-focused .togglebutton label {
 }
 
 .main-panel>.content {
-  margin-top: 70px;
+
   padding: 30px 15px;
   min-height: calc(100vh - 123px);
 }

@@ -13,7 +13,9 @@
                 <div class="col-md-12 content">
                     <div class="card">
                         <div class="card-header card-header-primary">
-                            <h4 class="card-title">اضافه کردن server</h4>
+
+                            <h4 class=" card-title">Add New Server</h4>
+
                         </div>
                         <div class="card-body">
 
@@ -24,12 +26,26 @@
                                     {!!Form::text('url', null , ['class'=>'form-control'])!!}
                                 </div>
 
-                                <div class="form-group bmd-form-group">
+                                <div class="  form-group bmd-form-group">
                                     {!!Form::submit('Create WatchItem' , ['class'=>'btn btn-primary pull-right'])!!}
                                 </div>
                                 {!! Form::close() !!}
+                            </div>
 
-                                    <table class="table">
+                              <div class="row">
+                                  <div class="offset-md-4 col-md-5">
+                                      {!! Form::open(['method' => 'GET','action' => ['ServerController@refresh']]) !!}
+
+                                      {!!Form::submit('Check Now', ['class'=>' btn btn-success'])!!}
+
+                                      {!! Form::close() !!}
+                                  </div>
+
+                              </div>
+
+
+
+                                    <table class="table col-md-12 ">
                                         <thead class=" text-primary">
                                         <tr><th>
                                                 ID
@@ -107,61 +123,10 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="card card-chart">
-                        <div class="card-header card-header-success">
-                            <div class="ct-chart" id="dailySalesChart"></div>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">فروش روزانه</h4>
-                            <p class="card-category">
-                    <span class="text-success">
-                      <i class="fa fa-long-arrow-up"></i> 55% </span> رشد در فروش امروز.</p>
-                        </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <i class="material-icons">access_time</i> ۴ دقیقه پیش
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-chart">
-                        <div class="card-header card-header-warning">
-                            <div class="ct-chart" id="websiteViewsChart"></div>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">دنبال کننده‌های ایمیلی</h4>
-                            <p class="card-category">کارایی آخرین کمپین</p>
-                        </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <i class="material-icons">access_time</i> کمپین دو روز پیش ارسال شد
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-chart">
-                        <div class="card-header card-header-danger">
-                            <div class="ct-chart" id="completedTasksChart"></div>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">وظایف انجام شده</h4>
-                            <p class="card-category">کارایی آخرین کمپین</p>
-                        </div>
-                        <div class="card-footer">
-                            <div class="stats">
-                                <i class="material-icons">access_time</i> کمپین دو روز پیش ارسال شد
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
 
 
-    </div>
     </div>
 
 
